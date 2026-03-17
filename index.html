@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJ Sonhos em Papel</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="device-frame" src=""></iframe>
+
+  <script>
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    const iframe = document.getElementById('device-frame');
+
+    if (isMobile) {
+      iframe.src = 'MOBILE/MOBILE.html';
+    } else {
+      iframe.src = 'DESKTOP/DESKTOP.html';
+    }
+  </script>
+</body>
+</html>
